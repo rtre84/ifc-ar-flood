@@ -99,6 +99,7 @@
     var isAddingObject = false;
 
     var terrainImages = {
+        'City': 'resources/images/terrain/IGMS/121669_1.jpeg',
         'IGMS1': 'resources/images/terrain/IGMS/igms_693432,4598934,694456,4599958_512.jpg',
         'IGMS2': 'resources/images/terrain/IGMS/igms_617851,4595749,620411,4598309_512.jpg',
         'IGMS3': 'resources/images/terrain/IGMS/igms_640934,4596481,643494,4599041_512.jpg',
@@ -107,6 +108,7 @@
         'Clouds': 'resources/images/terrain/clouds_256.png'
     };
     var terrainImageSettings = {
+        'resources/images/terrain/IGMS/121669_1.jpeg': { 'preblur': 0, 'height': 0.5, 'midGreyIsLowest': true},
         'resources/images/terrain/IGMS/igms_693432,4598934,694456,4599958_512.jpg': { 'preblur': 2, 'height': 0.3, 'midGreyIsLowest': true },
         'resources/images/terrain/IGMS/igms_617851,4595749,620411,4598309_512.jpg': { 'preblur': 1, 'height': 0.3, 'midGreyIsLowest': true },
         'resources/images/terrain/IGMS/igms_640934,4596481,643494,4599041_512.jpg': { 'preblur': 3, 'height': 0.3, 'midGreyIsLowest': true },
@@ -139,7 +141,7 @@
         objectsDynObject: dynObjects[Object.keys(dynObjects)[0]],
         objectsAddDynObject: objectsAddDynObject,
         objectsRemoveObject: objectsRemoveObject,
-        waterFloodVolRate: 0.0,
+        waterFloodVolRate: -8,
         waterResetFloodRate: function () {
             options.waterFloodVolRate = 0.0;
         },
