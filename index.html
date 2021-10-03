@@ -1154,21 +1154,21 @@
         var control;
 
         //Tracking folder
-        arFolder = gui.addFolder('Augmented Reality');
-        arFolder.open();
-
-        control = arFolder.add(options, 'arOn').name('On').listen();
-
-        if (ARLIB === 'jsartoolkit') {
-            control = arFolder.add(options, 'arTrackingThreshold', 0, 255).name('Tracking Threshold');
-            changeTrackingThreshold = function (value) {
-                var arLib = skarf.getArLib();
-                if (arLib instanceof SKARF.JsArToolKitArLib) {
-                    arLib.setThreshold(value);
-                }
-            };
-            control.onChange(changeTrackingThreshold);
-        }
+        // arFolder = gui.addFolder('Augmented Reality');
+        // arFolder.open();
+        //
+        // control = arFolder.add(options, 'arOn').name('On').listen();
+        //
+        // if (ARLIB === 'jsartoolkit') {
+        //     control = arFolder.add(options, 'arTrackingThreshold', 0, 255).name('Tracking Threshold');
+        //     changeTrackingThreshold = function (value) {
+        //         var arLib = skarf.getArLib();
+        //         if (arLib instanceof SKARF.JsArToolKitArLib) {
+        //             arLib.setThreshold(value);
+        //         }
+        //     };
+        //     control.onChange(changeTrackingThreshold);
+        // }
 
         //Terrain folder
         terrainFolder = gui.addFolder('Terrain');
@@ -1241,26 +1241,26 @@
         control = sculptFolder.add(options, 'sculptClearSculpts').name('Clear Sculpts');
 
         //Objects folder
-        objectsFolder = gui.addFolder('Objects');
-        objectsFolder.open();
-
-        objectsStaticObjectControl = objectsFolder.add(options, 'objectsStaticObject', staticObjects).name('Static Object').listen();
-        changeObjectsStaticObject = function (value) {
-            options.objectsStaticObject = value;
-        };
-        objectsStaticObjectControl.onChange(changeObjectsStaticObject);
-
-        control = objectsFolder.add(options, 'objectsAddStaticObject').name('Add Static Object');
-
-        objectsDynObjectControl = objectsFolder.add(options, 'objectsDynObject', dynObjects).name('Dynamic Object').listen();
-        changeObjectsDynObject = function (value) {
-            options.objectsDynObject = value;
-        };
-        objectsDynObjectControl.onChange(changeObjectsDynObject);
-
-        control = objectsFolder.add(options, 'objectsAddDynObject').name('Add Dynamic Object');
-
-        control = objectsFolder.add(options, 'objectsRemoveObject').name('Remove');
+        // objectsFolder = gui.addFolder('Objects');
+        // objectsFolder.open();
+        //
+        // objectsStaticObjectControl = objectsFolder.add(options, 'objectsStaticObject', staticObjects).name('Static Object').listen();
+        // changeObjectsStaticObject = function (value) {
+        //     options.objectsStaticObject = value;
+        // };
+        // objectsStaticObjectControl.onChange(changeObjectsStaticObject);
+        //
+        // control = objectsFolder.add(options, 'objectsAddStaticObject').name('Add Static Object');
+        //
+        // objectsDynObjectControl = objectsFolder.add(options, 'objectsDynObject', dynObjects).name('Dynamic Object').listen();
+        // changeObjectsDynObject = function (value) {
+        //     options.objectsDynObject = value;
+        // };
+        // objectsDynObjectControl.onChange(changeObjectsDynObject);
+        //
+        // control = objectsFolder.add(options, 'objectsAddDynObject').name('Add Dynamic Object');
+        //
+        // control = objectsFolder.add(options, 'objectsRemoveObject').name('Remove');
 
         //Water folder
         waterFolder = gui.addFolder('Water');
@@ -1664,6 +1664,21 @@
     <div id="threejs-container"></div>
     <div id="info-container">
         <div>
+            <p class="info-header">- Our Pitch -</p>
+            <p>Comparisons of flood data and loss for satellite observations and
+                past records helps show us where improvements to our global infrastructure,
+                water management and storage resources should be made or improved. Our
+                research shows documented stats from historical observations. The benefit of
+                quantifying this research and isolating its access in one place gives Emergency
+                Management Resources, First Responders, Government Agencies, The United Nations, and
+                all other aid providers key resources to mitigate and manage a flood disaster more
+                efficiently.
+        </div>
+        <div>
+            <p class="info-header">- What this is -</p>
+            <p>A Proof of concept tool that simulates flooding impact on terrain and intensity of the flood.
+        </div>
+        <div>
             <p class="info-header">- MOUSE &amp; KEYBOARD -</p>
             <p>
                 [ camera ]<br/>
@@ -1692,9 +1707,9 @@
             </p>
         </div>
         <div>
-            <p class="info-header">- AUGMENTED REALITY -</p>
+            <p class="info-header">- Original Source -</p>
             <p>
-                You will need <a href="https://github.com/skeelogy/ifc-ar-flood/wiki/Items-Needed-For-The-Demo" target="_blank">printed AR markers and a good webcam</a> if you wish to try out augmented reality controls
+                <a href="https://github.com/skeelogy/ifc-ar-flood/" target="_blank">IFC</a>
             </p>
         </div>
     </div>
